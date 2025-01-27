@@ -1,0 +1,46 @@
+﻿@{
+    var date = DateTime.Now.ToString("dd/MM/yyyy");
+    var year = DateTime.Now.Year;
+}
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - myApp</title>
+    <script type="importmap"></script>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NavBar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Razor.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/About.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/myApp.styles.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <header class="header">
+        <h1><a asp-page="/Index"><img src="~/images/logo.png" alt="logo"></a></h1>
+        <p class="date">@date</p>
+    </header>
+    <div class="layout-container">
+        <nav class="sidebar">
+            <partial name="partials/_NavBar" />
+        </nav>
+        <main class="main-content">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            &copy; @year - Mohamed Abokashef
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

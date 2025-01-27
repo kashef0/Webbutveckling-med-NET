@@ -1,0 +1,13 @@
+﻿@page
+@model myApp.Pages.IndexModel
+@{
+
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="sideNav-list-style">
+    <!-- en partial view för _ItemsList.cshtml och skickar in Model.Animals som modell -->
+    <partial name="partials/_ItemsList.cshtml" model="Model.Animals" />
+</div>
+

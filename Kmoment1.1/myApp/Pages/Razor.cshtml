@@ -1,0 +1,38 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+    var date = DateTime.Now.ToString();
+    string[] lists = {
+    "WD001, Webbutveckling",
+    "WP002, Wordpress",
+    "WD003, Webbutveckling med .NET",
+    "PR004, Introduktion till programmering",
+    "ID005, Interaktionsdesign",
+    "FE006, Front-end utveckling",
+    "DB007, Databaser och webbsystem",
+    "WS008, Webbteknik och säkerhet"
+    };
+
+
+}
+
+
+<h1 class="page-rubrik">@ViewData["title"]</h1>
+<div class="razor-container">
+<section class="razor-date">
+    <h2>Information</h2>
+    <p>Datum/klockslag: @date</p>
+</section>
+<section class="razor-course">
+    <h2>Program jag har läst:</h2>
+    @foreach(var list in lists.Select((value, index) => new {value, index})){
+        <ul class="unlisted">
+            <span class="index-list">@list.index</span>- 
+            <li class="course-list">
+                @list.value
+            </li>
+        </ul>
+    }
+</section>
+</div>

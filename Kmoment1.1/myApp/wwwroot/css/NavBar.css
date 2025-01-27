@@ -1,0 +1,44 @@
+.navBar {
+    width: 100%;
+}
+
+.rubik {
+    width: 100%;
+    padding: 1rem;
+    background-color: #000000;
+    color: aliceblue;
+
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000000;
+    align-items: center;
+  }
+  
+  .vertical-menu a.nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    background-color: #bdbdbd !important;
+    color: black;
+    list-style: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 1rem 0;
+  }
+  
+  .vertical-menu .nav-link:hover {
+    background-color: rgb(71, 189, 120) !important;
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  .vertical-menu .nav-link.active-link {
+    background-color: rgb(71, 189, 120) !important;
+    color: white;
+  }

@@ -1,0 +1,18 @@
+@model List<Animal>
+<h1 >Lista över djur</h1>
+
+
+<div class="main-container">
+    <div class="list-style">
+        @* Iterera genom varenda objekt i Model *@
+        @foreach (var item in Model)
+        {
+            <article class="list-container">
+                <h2>@item.Name</h2>
+                <p><strong>Type:</strong> @item.Type</p>
+                <p><strong>Description:</strong> @item.Description</p>
+                <p><strong>Habitat:</strong> @item.Habitat</p>
+            </article>
+        }
+    </div>
+</div>
