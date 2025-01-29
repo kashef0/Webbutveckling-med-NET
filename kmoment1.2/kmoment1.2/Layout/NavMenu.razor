@@ -1,0 +1,47 @@
+﻿<header>
+    <div class="under-header">
+        <a href="#">kmoment1.2</a>
+    </div>
+
+    <div class="navBar">
+        <!-- Hamburger knapp för Mobile -->
+        <button class="hamburger-btn" id="hamburger-btn" @onclick="toggleNav">☰</button>
+
+        <!-- pc Navi för Desktop -->
+        <nav class="pc-menu">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" ActiveClass="active">
+                <span class="bi bi-house-door-fill"></span> Home
+            </NavLink>
+            <NavLink class="nav-link" href="Convert" ActiveClass="active">
+                <span class="bi bi-plus-square-fill"></span> Convert
+            </NavLink>
+            <NavLink class="nav-link" href="Animes" ActiveClass="active">
+                <span class="bi bi-list-nested"></span> Animes
+            </NavLink>
+        </nav>
+
+        <!-- Mobile Nav -->
+        <nav class="mobile-menu @NavMenuClass" id="nav-menu">
+            <button class="close-nav" @onclick="toggleNav">✖</button>
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" ActiveClass="active">
+                <span class="bi bi-house-door-fill"></span> Home
+            </NavLink>
+            <NavLink class="nav-link" href="Convert" ActiveClass="active">
+                <span class="bi bi-plus-square-fill"></span> Convert
+            </NavLink>
+            <NavLink class="nav-link" href="Animes" ActiveClass="active">
+                <span class="bi bi-list-nested"></span> Animes
+            </NavLink>
+        </nav>
+    </div>
+</header>
+
+@code {
+    private bool Isclicked = false;
+
+    private void toggleNav() {
+        Isclicked = !Isclicked;
+    }
+
+    private string NavMenuClass => Isclicked ? "show" : "";
+}

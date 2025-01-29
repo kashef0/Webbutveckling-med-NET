@@ -1,0 +1,25 @@
+
+
+.convert-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 600px;
+    line-height: 1.4rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+
+}
+
+input[type=number] {
+    padding: .5rem;
+}
+
+label {
+    margin: .5rem 0;
+}
+
+.result {
+    color: rgb(32, 130, 72);
+}

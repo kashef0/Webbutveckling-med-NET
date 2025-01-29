@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\kmoment1.2.props" />
+</Project>

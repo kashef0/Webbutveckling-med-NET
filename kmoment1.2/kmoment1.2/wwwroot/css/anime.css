@@ -1,0 +1,125 @@
+
+.loading-animes{
+    justify-self: center;
+    font-size: 1.6rem;
+}
+
+.loading-animes img {
+    width: 300px;
+    border-radius: 5px;
+}
+
+
+.list-holder {
+    padding: 0;
+    margin: 0;
+}
+
+.list-style {
+    background-color: #f4f7f6;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 30%;
+    transform: scale(.95);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: .5rem;
+}
+
+.list-container:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px 0 rgba(26, 29, 176, 0.611);
+}
+
+.list-container h2 {
+    color: brown;
+   
+}
+
+.anime-img {
+    max-width: 350px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.anime-img {
+    clip-path: circle(50%);
+    filter: brightness(.6);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+.anime-img:hover {
+    clip-path: circle(70%);
+    filter: brightness(1);
+}
+
+#btn {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: rgb(173, 33, 68);
+    cursor: pointer;
+}
+
+h2, p {
+    padding: .20rem;
+    margin: 0;
+}
+
+.trailar-btn {
+    width: 100%;
+    padding: .5rem 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: white;
+    background-color: black;
+}
+.trailar-btn:hover {
+    background-color: rgb(45, 82, 184);
+}
+
+.anime-rubrik {
+    padding: 1rem 0;
+    text-align: center;
+    color: rgb(71, 189, 120);
+
+}
+
+h1 {
+    color: rgb(71, 189, 120);
+    padding: 1rem;
+    text-align: center;
+}
+
+.panigation-btn {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn, .next-btn {
+    background-color: #007bff; /* Blå färg */
+    color: white; /* Vit text */
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.back-btn:hover, .next-btn:hover {
+    background-color: #0056b3;
+}
+

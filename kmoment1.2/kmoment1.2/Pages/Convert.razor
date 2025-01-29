@@ -1,0 +1,63 @@
+﻿@page "/Convert"
+
+<PageTitle>Konvertera</PageTitle>
+
+<h1>Konvertera</h1>
+
+
+<!-- Meter till Feet Konvertering -->
+<div class="convert-container">
+<p style="color: red;">@(inputValue1 > 0 ? "" : errorMessage)</p>
+<label for="convertMeter">Konvertera från meter till fot</label>
+<input type="number" id="convertMeter" @bind-value="inputValue1" @oninput="OnInputMeter">
+<p class="result">@(inputValue1 > 0 ? $"{inputValue1} meter = {Math.Round(inputValue1  * 3.28084, 2)} fot" : "")</p>
+</div>
+
+<!-- Km/h till mph Konvertering-->
+<div class="convert-container">
+    <p style="color: red;">@(inputValue2 > 0 ? "" : errorMessage2)</p>
+<label for="convertSpeed">Konvertera från km/h till mh</label>
+<input type="number" id="convertSpeed" @bind-value="inputValue2" @oninput="OnInputFart">
+<p class="result">@(inputValue2 > 0 ? $"{inputValue2} km/h = {Math.Round(inputValue2 * 0.621371, 2)} mph" : "")</p>
+</div>
+
+@code {
+    private int inputValue1; // Variabel för att lagra det första inmatade värdet
+    private int inputValue2; // Variabel för att lagra det andra inmatade värdet
+    private string? errorMessage; // Felmeddelande om det första inmatade värdet är ogiltigt
+    private string? errorMessage2; // Felmeddelande om det andra inmatade värdet är ogiltigt
+
+     // Hanterar inmatning för det första värdet
+    private void OnInputMeter(ChangeEventArgs inputValue) {
+        string? value = inputValue.Value?.ToString();
+        if (value != null && int.TryParse(value, out int result)) { // konvertera strängen till ett heltal
+            if (result > 0) {
+                errorMessage = null;
+                inputValue1 = result;
+            } else {
+                errorMessage = "Talet måste vara större än 0";
+                inputValue1 = 0;
+            }
+        } else {
+            errorMessage = "Ogiltigt tal";
+            inputValue1 = 0;
+        }
+    }
+
+    // Hanterar inmatning för det andra värdet
+    private void OnInputFart(ChangeEventArgs inputValue) {
+        string? value = inputValue.Value?.ToString();
+        if (value != null && int.TryParse(value, out int result)) {
+            if (result > 0) {
+                errorMessage2 = null;
+                inputValue2 = result;
+            } else {
+                errorMessage2 = "Talet måste vara större än 0";
+                inputValue2 = 0;
+            }
+        } else {
+            errorMessage2 = "Ogiltigt tal";
+            inputValue2 = 0;
+        }
+    }
+}

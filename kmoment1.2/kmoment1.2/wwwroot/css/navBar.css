@@ -1,0 +1,129 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+/* Under-header title */
+.under-header a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navbar Container */
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* pc Menu  */
+.pc-menu {
+    display: flex; 
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: #1e90ff;
+}
+
+
+.nav-link.active {
+    font-weight: bold;
+    color: #1e90ff !important;
+}
+
+
+.hamburger-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Nav  */
+#nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Show Navigation when toggled */
+#nav-menu.show {
+    right: 0;
+}
+
+/* Mobile Nav Links */
+.mobile-menu .nav-link {
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Close Button */
+.close-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Show Hamburger Button & Hide pc Menu */
+    .hamburger-btn {
+        display: block;
+    }
+
+    .pc-menu {
+        display: none; /* Hide pc menu on mobile */
+    }
+
+    /* Mobile Menu Shows Only on Click */
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .under-header a {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

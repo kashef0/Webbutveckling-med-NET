@@ -1,0 +1,185 @@
+﻿@page "/Animes"
+@using System.Diagnostics.CodeAnalysis
+@inject HttpClient Http
+
+<PageTitle>Animes</PageTitle>
+
+
+<h1>Animes</h1>
+
+
+@if (listOfAnime == null)
+{   
+    <div class="loading-animes">
+    <p>Loading...</p>
+    <img src="https://media.tenor.com/hVRhFeDFW6oAAAAi/anime-wave.gif" alt="bye bye">
+    </div>
+}
+else
+{
+    <div class="main-container">
+        <div class="list-style">
+            @foreach (var anime in listOfAnime)
+            {
+                <article class="list-container">
+                    @if (!string.IsNullOrEmpty(anime.ImageUrl)) {
+                        <a href="@anime.ImageUrl_Large" target="_blank"><img class="anime-img" src="@anime.ImageUrl" alt="@anime.Name" /></a>
+                    }
+                    <h3 class="anime-rubrik">@anime.Name</h3>
+
+                    @if(!string.IsNullOrEmpty(anime.Description)) {
+                        <p>
+                            @if (showFullText == anime.animeId) {
+                                @anime.Description
+                            } else {
+                                @anime.Description.Substring(0, Math.Min(anime.Description.Length, 250))
+                            }
+                            
+                            <button id="btn" @onclick="() => toggleDescription(anime.animeId)">
+                                @(showFullText == anime.animeId ? " Läs mindre" : " Läs mer....")
+                            </button>
+                        </p>
+                    }
+                    @if (!string.IsNullOrEmpty(anime.VideoUrl))
+                    {
+                        <a class="trailar-btn" href="@anime.VideoUrl" target="_blank">Se trailer</a>
+                    }
+                </article>
+            }
+        
+        </div>
+        <div class="panigation-btn">
+            <button class="back-btn" @onclick="previousPage" disabled="@(pagination.current_page == 1? pagination.has_next_page==true : pagination.has_next_page==false)">föregående sida</button>
+            <p>Sida: @pagination.current_page av @pagination.last_visible_page</p>
+            <button class="next-btn" @onclick="nextPage" disabled="@(pagination.has_next_page == false)">Nästa sida</button>
+        </div>
+    </div>
+}
+
+@code {
+
+    private bool has_next_page = false; // Indikerar om det finns en nästa sida
+    private int pageNumber = 1; // Håller reda på aktuell sidnummer
+    private AnimeData? apiResponse; //  lagra API-svar
+    private int? showFullText = null; //  vilken anime-beskrivning som ska visas i sin helhet
+    private Anime[]? listOfAnime; // Lista med anime-data
+    private Pagination pagination; // Hanterar sidnumrering
+    private async Task FetchAnimeData()
+    {
+    
+       // Hämtar anime-data från API
+        apiResponse = await Http.GetFromJsonAsync<AnimeData>($"https://api.jikan.moe/v4/anime?page={pageNumber}");
+
+        if (apiResponse != null) {
+        // Map API data to the Anime class
+        if (apiResponse.Data != null)
+        {
+            listOfAnime = apiResponse.Data.Select(data => new Anime
+            {
+                animeId = data.mal_id,
+                Name = data.Title,
+                Description = data.Synopsis,
+                ImageUrl = data.Images?.jpg?.image_url,
+                ImageUrl_Large = data.Images?.jpg?.large_image_url,
+                VideoUrl = data.Trailer?.Url
+            }).ToArray();
+
+        pagination = apiResponse.Pagination;
+        }
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await FetchAnimeData();
+    }
+
+    private async Task nextPage() 
+    {
+        // Gå till nästa sida
+        if (apiResponse?.Pagination.has_next_page == true) 
+        {
+            pageNumber++;
+            await FetchAnimeData();
+        }
+    }
+
+     // Gå till föregående sida
+    private async Task previousPage()
+{
+    if (pageNumber > 1)
+    {
+        pageNumber--;
+        await FetchAnimeData();
+    }
+}
+     // Visa eller göm hela beskrivningen för en specifik anime
+    private void toggleDescription(int id) 
+    {
+        if (showFullText == id) 
+        {
+            showFullText = null;
+        } 
+        else 
+        {
+            showFullText = id;
+        }
+    }
+
+     // Klass för anime
+    public class Anime
+    {   
+        public int animeId { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? ImageUrl { get; set; }
+        public string? ImageUrl_Large { get; set; }
+        public string? VideoUrl { get; set; }
+
+        public int NumberOfPages {get; set;}
+    }
+
+    // Klass för att lagra API svar
+    public class AnimeData
+    {
+        public List<DataFormat>? Data { get; set; }
+
+        public Pagination Pagination  { get; set; } = new Pagination();
+    }
+
+    public class DataFormat
+    {
+        public int mal_id { get; set; }
+        public string? Title { get; set; }
+        public string? Synopsis { get; set; }
+        public ImageDataType? Images { get; set; }
+        public VideoUrl? Trailer { get; set; }
+    }
+
+    // Klass för att hantera bilder
+    public class ImageDataType
+    {
+        public ImageUrl? jpg { get; set; }
+    }
+    
+    public class ImageUrl
+    {
+        public string? image_url { get; set; }
+        public string? large_image_url { get; set; }
+    }
+    // Klass för att lagra videolänkar
+    public class VideoUrl
+    {
+        public string? Url { get; set; }
+    }
+
+    // Klass för att hantera sidnumrering
+    public class Pagination 
+    {
+        public int current_page { get; set; }
+        public int last_visible_page {get; set;}
+
+        public bool has_next_page => current_page < last_visible_page;
+
+    }
+}

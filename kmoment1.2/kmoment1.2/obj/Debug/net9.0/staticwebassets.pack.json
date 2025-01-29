@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\obj\\Debug\\net9.0\\scopedcss\\bundle\\kmoment1.2.styles.css",
+      "PackagePath": "staticwebassets\\kmoment1.2.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\css\\anime.css",
+      "PackagePath": "staticwebassets\\css\\anime.css"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\css\\convert.css",
+      "PackagePath": "staticwebassets\\css\\convert.css"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\css\\navBar.css",
+      "PackagePath": "staticwebassets\\css\\navBar.css"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\images\\loading.jpg",
+      "PackagePath": "staticwebassets\\images\\loading.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\Users\\kashe\\OneDrive\\Desktop\\razor-test\\kmoment1.2\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.kmoment1.2.props",
+      "PackagePath": "build\\kmoment1.2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.kmoment1.2.props",
+      "PackagePath": "buildMultiTargeting\\kmoment1.2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.kmoment1.2.props",
+      "PackagePath": "buildTransitive\\kmoment1.2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.kmoment1.2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.kmoment1.2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
