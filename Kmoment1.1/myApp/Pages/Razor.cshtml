@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Razor";
     var date = DateTime.Now.ToString();
+    var day = DateTime.Today.DayOfWeek;
+    var friday = DayOfWeek.Friday;
     string[] lists = {
     "WD001, Webbutveckling",
     "WP002, Wordpress",
@@ -23,6 +25,11 @@
 <section class="razor-date">
     <h2>Information</h2>
     <p>Datum/klockslag: @date</p>
+    @if (day == friday) {
+        <p>Idag är @friday!</p>
+    } else  {
+        <p>Idag är inte @friday!</p>
+    }
 </section>
 <section class="razor-course">
     <h2>Program jag har läst:</h2>
