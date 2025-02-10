@@ -1,0 +1,37 @@
+
+
+.grid-container[b-36j3t1uqvz] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+}
+
+
+.pro-container[b-36j3t1uqvz] {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: .5rem;
+    border-radius: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in !important;
+}
+
+.pro-container:hover[b-36j3t1uqvz] {
+    transform: scale(1);
+}
+
+.pro-container img[b-36j3t1uqvz]{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem;
+
+}
+
+
+.pro-container h2[b-36j3t1uqvz] {
+    font-size: 1.3rem;
+}
+
+

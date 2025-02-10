@@ -1,0 +1,163 @@
+/* _content/KMoment02/Views/Home/index.cshtml.rz.scp.css */
+.container[b-upt7bcl6yf] {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box[b-upt7bcl6yf] {
+    background-color: #ffffff;
+    width: 60% ;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p[b-upt7bcl6yf] {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-link[b-upt7bcl6yf] {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-link:hover[b-upt7bcl6yf] {
+    background-color: #0056b3;
+}
+/* _content/KMoment02/Views/Product/AllProducts.cshtml.rz.scp.css */
+
+
+.grid-container[b-36j3t1uqvz] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+}
+
+
+.pro-container[b-36j3t1uqvz] {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: .5rem;
+    border-radius: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in !important;
+}
+
+.pro-container:hover[b-36j3t1uqvz] {
+    transform: scale(1);
+}
+
+.pro-container img[b-36j3t1uqvz]{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem;
+
+}
+
+
+.pro-container h2[b-36j3t1uqvz] {
+    font-size: 1.3rem;
+}
+
+
+/* _content/KMoment02/Views/Product/_Form.cshtml.rz.scp.css */
+.container[b-2mox1s9rb4] {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+h2[b-2mox1s9rb4] {
+    text-align: center;
+    color: #333;
+}
+label[b-2mox1s9rb4] {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[b-2mox1s9rb4], textarea[b-2mox1s9rb4] {
+    width: 100% !important;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button[b-2mox1s9rb4] {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover[b-2mox1s9rb4] {
+    background-color: #0056b3;
+}
+
+/* _content/KMoment02/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-7b3fpkydok] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-7b3fpkydok] {
+  color: #0077cc;
+}
+
+.btn-primary[b-7b3fpkydok] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-7b3fpkydok], .nav-pills .show > .nav-link[b-7b3fpkydok] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-7b3fpkydok] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-7b3fpkydok] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-7b3fpkydok] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-7b3fpkydok] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-7b3fpkydok] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

@@ -1,0 +1,11 @@
+@model KMoment02.Models.Products
+
+@{
+     ViewData["Title"] = "Uppdatera Produkter";
+}
+
+@if (Model != null) {
+    <h2>@ViewData["Title"] </h2>
+
+     <partial name="_Form" model="@Model" />
+}

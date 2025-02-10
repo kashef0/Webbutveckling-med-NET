@@ -1,0 +1,10 @@
+@model KMoment02.Models.Products
+
+@{
+    ViewData["Title"] = "Lägg till Produkt";
+
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<partial name="_Form" model="@new KMoment02.Models.Products()" />

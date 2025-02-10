@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Om ASP.NET MVC";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4 text-center" style="max-width: 600px;">
+        <div class="card-body">
+            <h3 class="card-title text-primary">Introduktion till ASP.NET MVC</h3>
+            <p class="card-text">
+                ASP.NET MVC (Model-View-Controller) är ett webbramverk för att bygga dynamiska webbapplikationer. 
+                Det separerar ansvaret för presentation, affärslogik och datalagring i tre olika delar:
+            </p>
+            <ul class="list-group list-group-flush text-start mb-3">
+                <li class="list-group-item"><strong>Model:</strong> Representerar data och affärslogik.</li>
+                <li class="list-group-item"><strong>View:</strong> Användargränssnittet som visar data.</li>
+                <li class="list-group-item"><strong>Controller:</strong> Hanterar användarens begärningar och interaktioner.</li>
+            </ul>
+            <p class="card-text">För att lära dig mer om produkterna vi erbjuder, klicka på länken nedan för att se vårt produktutbud.</p>
+            
+            <a asp-controller="Product" asp-action="AllProducts" class="btn btn-primary mt-2">Se alla produkter</a>
+        </div>
+    </div>
+</div>

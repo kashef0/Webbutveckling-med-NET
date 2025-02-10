@@ -1,0 +1,38 @@
+.container[b-2mox1s9rb4] {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+h2[b-2mox1s9rb4] {
+    text-align: center;
+    color: #333;
+}
+label[b-2mox1s9rb4] {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[b-2mox1s9rb4], textarea[b-2mox1s9rb4] {
+    width: 100% !important;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button[b-2mox1s9rb4] {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover[b-2mox1s9rb4] {
+    background-color: #0056b3;
+}
+

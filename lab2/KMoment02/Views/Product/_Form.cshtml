@@ -1,0 +1,35 @@
+@model KMoment02.Models.Products
+@{
+    string action = ViewBag.action ?? String.Empty;
+}
+
+
+
+@if (Model != null) {
+<div class="container">
+    <form asp-controller="Product" asp-action="@action" method="post">
+            @if (action?.ToLower() == "edit") {
+                <input type="hidden" asp-for="id" />
+            }
+            <div class="row md-3" asp-validation-summary="All"></div>
+
+            <label for="name">Produktnamn</label>
+            <input type="text" id="name" asp-for="name" style="width: 100%; !important" required>
+            <div class="col"><span class="text-danger" asp-validation-for="name"></span></div>
+
+            <label for="price">Pris</label>
+            <input type="number" id="price" asp-for="price" step="0.01" style="width: 100%;" required>
+            <div class="col"><span class="text-danger" asp-validation-for="price"></span></div>
+
+            <label for="imgUrl">Bild URL</label>
+            <input type="text" id="imgUrl" asp-for="imgUrl" style="width: 100%;">
+            <div class="col"><span class="text-danger" asp-validation-for="imgUrl"></span></div>
+
+            <label for="description">Beskrivning</label>
+            <textarea id="description" asp-for="description" rows="4" style="width: 100%;"></textarea>
+            <div class="col"><span class="text-danger" asp-validation-for="description"></span></div>
+            
+            <button type="submit">@(action?.ToLower() == "create" ? "Lägg till" : "Uppdatera")</button>
+    </form>
+</div>
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 201,
+    "name": "CHECK PRINT SHIRT",
+    "price": 110.0,
+    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+    "description": "A versatile check-print shirt that blends classic and modern styles. Perfect for casual and semi-formal occasions, offering a comfortable fit with premium fabric."
+  },
+  {
+    "id": 202,
+    "name": "GLORIA HIGH LOGO SNEAKER",
+    "price": 91.0,
+    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+    "description": "A stylish high-top sneaker featuring the iconic Guess logo. Designed for both fashion and comfort, making it a perfect choice for everyday wear."
+  },
+  {
+    "id": 203,
+    "name": "CATE RIGID BAG",
+    "price": 94.5,
+    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+    "description": "A structured handbag with a sleek and elegant design. Spacious enough to carry daily essentials while adding a touch of sophistication to any outfit."
+  },
+  {
+    "id": 204,
+    "name": "GUESS CONNECT WATCH",
+    "price": 438.9,
+    "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+    "description": "A modern smartwatch combining classic aesthetics with advanced technology. Perfect for those who want both functionality and a stylish accessory."
+  },
+  {
+    "id": 205,
+    "name": "'70s RETRO GLAM KEFIAH",
+    "price": 20.0,
+    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+    "description": "A vintage-inspired scarf that adds a retro-chic touch to any outfit. Lightweight and stylish, perfect for layering or accessorizing with different looks."
+  }
+]
