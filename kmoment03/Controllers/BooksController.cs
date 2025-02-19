@@ -25,10 +25,10 @@ namespace kmoment03.Controllers
         {
             ViewBag.Class = "Books";
             if (_context.Books == null) {
-                return Problem("there is no books");
+                return Problem("there are no books");
             }
-            var bookQuery = from b in _context.Books select b;
-            var booksContext = _context.Books.Include(b => b.Author);
+            
+            var bookQuery = _context.Books.Include(b => b.Author).AsQueryable();
             if (!string.IsNullOrEmpty(search)) {
                 bookQuery = bookQuery.Where(s => s.Title.ToUpper().Contains(search.ToUpper()));
             }
