@@ -1,0 +1,51 @@
+@model IEnumerable<BooksDirectory.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Startsida</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Skapa nytt</a>
+</p>
+<form class="d-flex" asp-controller="Books" asp-action="Index">
+    <input class="form-control me-2" type="search" placeholder="Söka efter..." aria-label="Search" name="search">
+    <input class="btn btn-secondary" type="submit" value="Söka" />
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author.Name)
+            </td>
+            <td>
+                <a class="btn btn-warning mb-1" asp-action="Edit" asp-route-id="@item.Id">Uppdatera</a>
+                <a class="btn btn-info mb-1" asp-action="Details" asp-route-id="@item.Id">Detaljer</a>
+                <a class="btn btn-danger mb-1" asp-action="Delete" asp-route-id="@item.Id">Radera</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
