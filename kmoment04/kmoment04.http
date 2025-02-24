@@ -1,0 +1,6 @@
+@kmoment04_HostAddress = http://localhost:5052
+
+GET {{kmoment04_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
