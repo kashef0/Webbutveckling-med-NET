@@ -25,7 +25,7 @@ namespace kmoment04.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Song>>> GetSongs()
         {
-            return await _context.Songs.ToListAsync();
+            return await _context.Songs.Include(c => c.Category).ToListAsync();
         }
 
         // GET: api/Song/5

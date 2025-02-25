@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kmoment04")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a5d12ae6cf349a998f66e9d0c606c5065ea6e67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc21844c0129017b2e9ce2f2ed027a4b070658ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("kmoment04")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kmoment04")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
