@@ -15,7 +15,7 @@ Installation
 
 1.  Klona repositoryt:
 
-    `git clone https://github.com/ditt-användarnamn/ditt-repository.git`
+    `git clone https://github.com/kashef0/Webbutveckling-med-NET/tree/kmoment04/kmoment04`
 
 2.  Navigera till projektmappen:
 
